@@ -3,5 +3,5 @@ while(1) {
         [double]$seed = ($seed + [double](Get-Date -UFormat %s)) / [math]::PI / [math]::E
     }
 
-    [int]([Math]::Pow($seed, $i) * [math]::PI * [math]::E % 1000)
+    [int]([string]($seed % ($i / [math]::PI))).substring(7,5)
 }
