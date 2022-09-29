@@ -1,5 +1,5 @@
 while(1) {
-    for($i = 0; $i -le ([double](Get-Date -UFormat %s) % [math]::PI -shl 2); $i++) {
+    for($i = 0; $i -le ([double](Get-Date -UFormat %s) % [math]::PI -shl 3); $i++) {
         [double]$seed = ($seed + [double](Get-Date -UFormat %s)) / [math]::PI / [math]::E
     }
 
