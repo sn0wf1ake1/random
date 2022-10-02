@@ -1,7 +1,7 @@
 while(1) {
-    for($i = 0; $i -le ([double](Get-Date -UFormat %s) % [math]::PI -shl 3); $i++) {
-        [double]$seed += [double](Get-Date -UFormat %s) / [math]::PI / [math]::E
+    for($i = 0; $i -le ([double](Get-Date -UFormat %s) % [math]::E -shl 5); $i++) {
+        [double]$seed += [double](Get-Date -UFormat %s) / [math]::PI
     }
 
-    [int]([string]($seed)).substring(7,5)
+    [int]([string]($seed)).substring(8,5)
 }
